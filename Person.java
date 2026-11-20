@@ -1,5 +1,6 @@
 /**
- * Abstract class containing common student details.
+ * Abstract class containing common student details. pointers for each of teh credentials required
+ here these are considered as strings like mail and usn both are str
  */
 public abstract class Person {
     private String name;
