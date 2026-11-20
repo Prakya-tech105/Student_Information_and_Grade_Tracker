@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 /**
  * Main menu for Student Information and Grade Tracker.
+ get is used to call the func from the student and manager 
  */
 public class main {
     public static void main(String[] args) {
@@ -100,18 +101,18 @@ public class main {
                     }
                 }
                 else if (choice.equals("6")) {
-                    System.out.println("Thank you!");
+                    System.out.println("Thank you!!!");
                     break;
                 }
                 else {
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Invalid choice!!. Try again...");
                 }
             }
             catch (StudentException | MarksException e) {
                 System.out.println("Error: " + e.getMessage());
             }
             catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number for marks.");
+                System.out.println("Please enter a valid number for marks!!!");
             }
         }
 
