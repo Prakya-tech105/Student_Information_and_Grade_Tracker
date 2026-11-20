@@ -1,9 +1,10 @@
-import java.util.HashMap;
+ // key value pair of usn and student - hash map import 
+import java.util.HashMap; 
 import java.util.Map;
 
-/**
- * Stores student marks and calculates CGPA.
- */
+
+ // * Stores student marks and calculates CGPA.
+
 public class Student extends Person {
     private Map<String, Integer> marks = new HashMap<>();
 
@@ -17,7 +18,7 @@ public class Student extends Person {
         return "Student";
     }
 
-    // Add or update marks for a subject.
+    // Add or to update marks for a subject.
     public void addMarks(String subject, int score) throws MarksException {
         if (score < 0 || score > 100) {
             throw new MarksException("Marks must be between 0 and 100.");
@@ -25,7 +26,7 @@ public class Student extends Person {
         marks.put(subject, score);
     }
 
-    // Convert marks into grade points.
+    // Convert marks into grade points considering the 1-10 as 1 gradepoint
     private int gradePoint(int score) {
         if (score >= 90) return 10;
         if (score >= 80) return 9;
@@ -36,7 +37,7 @@ public class Student extends Person {
         return 0;
     }
 
-    // Calculate average grade points.
+    //  average grade points total grade by total subjects
     public double getCgpa() {
         if (marks.isEmpty()) {
             return 0;
@@ -50,7 +51,7 @@ public class Student extends Person {
         return (double) total / marks.size();
     }
 
-    // Display the student's report card.
+    // Display  student's report card.
     public void printReport() {
         System.out.println("\n===== STUDENT REPORT CARD =====");
         System.out.println("Name       : " + getName());
